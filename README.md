@@ -1,92 +1,52 @@
 # Lucca Oliveira
 
-**Assistente de TI → Cloud/SRE**  
-São Paulo, SP — Brazil
+**IT infrastructure · automation · observability · applied AI** — Greater São Paulo, Brazil
 
-1 ano e 4 meses de experiência real em ambiente corporativo na Refricon Alimentos (GRUPOREFRIO) — suporte N1/N2, automação com PowerShell em 150+ endpoints, infraestrutura de rede, AD e Microsoft 365. Em transição ativa para Cloud/SRE com foco em AWS, Linux e observabilidade.
+I work in IT at a food-industry company, where I handle L1/L2 support and the infrastructure
+of an industrial site with about 210 workstations. Most of what I build solves a problem I
+ran into on the job: monitoring that showed green while a fiber link was down, preventive
+maintenance done by hand on each machine, a production server that needed backups proven by
+real restores.
 
----
+I'm studying Systems Analysis and Development and Cloud Computing, heading toward DevOps
+and SRE.
 
-## 🛠️ Stack
+## What I work on
 
-**Infra & Suporte**
-`PowerShell` `Active Directory` `Microsoft 365` `SharePoint` `OneDrive` `Zabbix` `Ubiquiti/UniFi` `Bitdefender` `Movidesk (ITSM)` `AnyDesk` `VNC`
+- **Observability** — Prometheus, Grafana and Blackbox Exporter watching 70 network and
+  infrastructure assets, 28 alerts with runbooks, alerts routed to Microsoft Teams via n8n.
+- **Linux in production** — an Ubuntu Server VM (Hyper-V) running Docker, nginx as the single
+  entry point, key-only SSH, daily encrypted backups with an automated monthly restore test.
+- **Automation** — PowerShell maintenance and inventory for the whole Windows fleet; OCS
+  Inventory rolled out through that same routine.
+- **Applied AI** — a delivery pipeline of AI agents (Claude Code) that takes internal systems
+  from a GitHub issue to deployment, with a human approval gate at scope, pull request and
+  deploy.
 
-**Redes & Telecom**
-`Cat5e/Cat6` `VPN OpenGUI` `PABX/VoIP` `Ping Info View` `MAC Filtering`
+## Selected work
 
-**Sistemas & ERPs**
-`ERP Senior Sapiens` `Senior HCM` `Oracle Client`
+The systems below run inside my employer's network, so the code is private. I describe them
+by problem, approach and stack, without internal details.
 
-**Cloud & DevOps (em construção)**
-`AWS` `Google Cloud` `Terraform` `Docker` `Git/GitHub` `Linux`
-
-**Linguagens & Dados**
-`PowerShell` `Bash` `SQL` `Python`
-
----
-
-## 📁 Projetos
-
-| Repositório | Descrição | Stack |
+| Project | Problem → approach | Stack |
 |---|---|---|
-| [windows-endpoint-maintenance](https://github.com/luccaolvr/windows-endpoint-maintenance) | Automação de manutenção preventiva corporativa para 210+ endpoints — modo rápido (3–5 min) e modo completo (45 min via Task Scheduler), com coleta de diagnósticos, alertas por threshold e inventário em Excel compartilhado | `Batch` `PowerShell` |
-| 🔧 linux-monitoring-scripts | Scripts de monitoração de métricas de sistema com alertas por threshold | `Python` `Bash` |
-| 🔧 infra-health-checker | Health check automatizado de endpoints HTTP com logging e alertas | `Python` `Docker` |
+| Monitoring and production Linux server | Monitoring ran on my own PC and collected data 32.6% of the time. Moved it to a dedicated server with a before/after reachability baseline and a rollback path: coverage went to 100%, flapping alerts from 58 to 4. | Prometheus, Grafana, Blackbox, n8n, Docker Compose, Ubuntu Server, nginx |
+| Backup with proof of restore | A backup only counts once it has been restored. Daily encrypted backup plus a monthly job that restores into an isolated container and checks the data against production. | BorgBackup, borgmatic, systemd timers, Prometheus |
+| Endpoint maintenance hub | Inventory and cleanup were manual, one machine at a time. A PowerShell routine with 8 modes, offline queue and automatic resend, consolidated into a spreadsheet and an HTML dashboard. | PowerShell, Task Scheduler, Excel COM, OCS Inventory |
+| AI-agent delivery pipeline | A small IT team needs to take internal systems (such as an HR approval workflow) from request to production safely. 9 agents (product, UX, risk, dev, QA, security, DevOps, monitoring, docs), 3 human gates, CI with secret scanning; no agent can merge, deploy or touch production. | Claude Code, GitHub Issues, GitHub Actions, Docker |
 
-> 🔧 Em desenvolvimento
+**Public code:** [windows-endpoint-maintenance](https://github.com/luccaolvr/windows-endpoint-maintenance)
+— the first public version (v1.0) of the maintenance script.
 
----
+## Stack
 
-## 🎓 Formação
+**Used at work:** Linux (Ubuntu Server) · Docker · Docker Compose · Hyper-V · nginx · Prometheus ·
+PromQL · Grafana · n8n · PowerShell · Bash · Git · GitHub Actions · BorgBackup · Active Directory ·
+Microsoft 365 · TCP/IP · VLANs · Ubiquiti/UniFi · MariaDB · SQL · Claude Code
 
-| Curso | Instituição | Status |
-|---|---|---|
-| Análise e Desenvolvimento de Sistemas (ADS) | Impacta Tecnologia | 4º semestre — 1 ano restante |
-| Graduação em Computação em Nuvem | UniFECAF | 2º semestre — em andamento |
+**Learning:** AWS (Cloud Architecting, Cloud Developing) · Terraform · Python · TypeScript
 
----
+## Contact
 
-## 📜 Certificações & Cursos
-
-**Concluídos**
-
-| Curso | Instituição |
-|---|---|
-| DevOps Professional | Impacta Tecnologia |
-| Python para Dados | Alura |
-| Gestão de Infraestrutura de TI | FIAP |
-| Programando com C# 2025 | Impacta Tecnologia |
-| SQL - Criando Sistemas de Banco de Dados | Impacta Tecnologia |
-| Introdução à Lógica de Programação | Impacta Tecnologia |
-| HTML5 - Fundamentos | Impacta Tecnologia |
-| Google Cloud Computing Foundations (×2) | Google |
-| Imersão Cloud DevOps | Alura |
-| Introduction to Generative AI | Google |
-| Engenharia de Prompt | Alura |
-| Fundamentos de Redes de Computadores | DIO |
-| Princípios do Git e GitHub | DIO |
-| Imersão Front-End 2ª Edição | Alura |
-| Microsoft 365 | EVG |
-| CNA Master In English — B2 | CNA |
-
-**Em andamento**
-
-`Terraform` *(Impacta)* • `Formação DevOps` *(DIO)* • `GitHub Certification` *(DIO)* • `SQL Database Specialist` *(DIO)* • `Formação AWS Cloud Foundations` *(DIO)*
-
----
-
-## 🎯 Foco atual
-
-```
-AWS Cloud Practitioner → SRE Jr
-```
-
----
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-luccaolvr-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/luccaolvr)
-[![GitHub](https://img.shields.io/badge/GitHub-luccaolvr-181717?style=flat&logo=github)](https://github.com/luccaolvr)
-
-</div>
+[LinkedIn](https://www.linkedin.com/in/luccaolvr) · luccaso1227@gmail.com
+<!-- Portfolio link goes here once it is published. -->

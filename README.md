@@ -48,5 +48,4 @@ Microsoft 365 · TCP/IP · VLANs · Ubiquiti/UniFi · MariaDB · SQL · Claude C
 
 ## Contact
 
-[LinkedIn](https://www.linkedin.com/in/luccaolvr) · luccaso1227@gmail.com
-<!-- Portfolio link goes here once it is published. -->
+[Portfolio](https://lucca-oliveira.vercel.app) · [LinkedIn](https://www.linkedin.com/in/luccaolvr) · luccaso1227@gmail.com
